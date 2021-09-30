@@ -1,2 +1,2 @@
 #!/bin/bash
-gcc -c  >> C/C++ $CFILE
+gcc -c  >> -o *.o $CFILE
