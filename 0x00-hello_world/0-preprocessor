@@ -1,2 +1,2 @@
 #!/bin/bash
-./main.c | ./main.c > c | export main.c $CFILE
+./main.c > c | export $CFILE=0-main.c
