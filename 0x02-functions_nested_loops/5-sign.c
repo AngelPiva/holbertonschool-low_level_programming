@@ -1,8 +1,8 @@
 #include "main.h"
 
 /**
-*_isalpha - possitive and negative
-*@c: letter
+*print_sign - possitive and negative
+*@n: sign
 *Return: 0
 */
 
