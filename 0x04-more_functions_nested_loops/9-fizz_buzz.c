@@ -13,22 +13,22 @@ int main(void)
 	{
 	if (num % 15 == 0)
 	{
-	printf("FizzBuzz ");
+	printf("FizzBuzz");
 	}
 	else if (num % 3 == 0)
 	{
-	printf("Fizz ");
+	printf("Fizz");
 	}
 	else if (num % 5 == 0)
 	{
-	printf("Buzz ");
+	printf("Buzz");
 	}
-	else if (num > 99)
-	printf("%d", num);
 	else
 	{
-	printf("%d ", num);
+	printf("%d", num);
 	}
+	if (num != 100)
+	printf(" ");
 	}
 	putchar('\n');
 	return (0);
