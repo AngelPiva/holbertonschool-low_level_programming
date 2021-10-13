@@ -8,12 +8,15 @@
 void puts_half(char *str)
 
 {
-	int c = 0;
-	int half = 1;
+	int c = 1;
+	int half;
 
 	while (str[c] != '\0')
 	c++;
-	half = c / 2;
+	if (c % 2 == 0)
+	half = (c / 2);
+	else
+	half = ((c - 1) / 2);
 
 	while (str[half] != 0)
 	{
