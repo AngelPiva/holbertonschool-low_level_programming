@@ -1,9 +1,11 @@
 #include "main.h"
 
 /**
-**_strncat - function that concatenates two strings.
-*dest: string 1
-*src: string 2
+*_strncat - function that concatenates two strings.
+*@dest: string 1
+*@src: string 2
+*@n: bytes from src
+*Return: 0
 */
 
 char *_strncat(char *dest, char *src, int n)
@@ -16,6 +18,6 @@ char *_strncat(char *dest, char *src, int n)
 	{
 		dest[s + l] = (src[l]);
 	}
-		dest[s + l] = '\0';	
+		dest[s + l] = '\0';
 	return (dest);
 }
