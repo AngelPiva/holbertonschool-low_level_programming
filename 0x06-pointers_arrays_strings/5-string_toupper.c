@@ -2,9 +2,9 @@
 int _strlen(char *s);
 
 /**
-*
-*
-*
+*string_toupper -  changes all lowercase letters of a string to uppercase
+*@str: string
+*Return: str
 */
 
 char *string_toupper(char *str)
