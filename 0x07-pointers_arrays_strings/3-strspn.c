@@ -1,8 +1,10 @@
 #include "main.h"
 
 /**
-*
-*
+*_strspn - gets the length of a prefix substring
+*@s: where the number of bytes is extracted
+*@accept: only of bytes from here
+*Return: cont
 */
 
 unsigned int _strspn(char *s, char *accept)
@@ -20,5 +22,5 @@ unsigned int _strspn(char *s, char *accept)
 		if (s[c] == ' ')
 			break;
 	}
-	return(cont);
+	return (cont);
 }
