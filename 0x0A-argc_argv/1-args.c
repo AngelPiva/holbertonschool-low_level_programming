@@ -1,8 +1,10 @@
 #include <stdio.h>
 
 /**
-*
-*
+*main - program that prints the number of arguments passed into it
+*@argc: argument count
+*@argv: unused variable
+*Return: 0
 */
 
 int main(int argc, char *argv[]__attribute__((__unused__)))
