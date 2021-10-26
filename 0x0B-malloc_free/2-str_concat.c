@@ -1,8 +1,10 @@
 #include <stdlib.h>
 
 /**
-*
-*
+*str_concat - function that concatenates two strings
+*@s1: string 1
+*@s2: string 2
+*Return: 0
 */
 
 char *str_concat(char *s1, char *s2)
@@ -27,5 +29,7 @@ char *str_concat(char *s1, char *s2)
 		x[c] = s2[d];
 		c++;
 	}
+	if (x == NULL)
+		return (0);
 	return (x);
 }
