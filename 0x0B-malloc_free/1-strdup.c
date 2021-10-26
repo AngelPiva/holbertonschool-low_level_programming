@@ -2,8 +2,9 @@
 #include "main.h"
 
 /**
-*
-*
+*_strdup - function that returns a pointer to a newly allocated space in memory
+*@str: pointer
+*Return: n
 */
 
 char *_strdup(char *str)
