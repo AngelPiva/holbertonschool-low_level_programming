@@ -9,7 +9,7 @@
 
 int **alloc_grid(int width, int height)
 {
-	int **poi, a;
+	int **poi, a, b;
 
 	if (width <= 0 || height <= 0)
 	{
@@ -30,8 +30,10 @@ int **alloc_grid(int width, int height)
 			free(poi);
 			return (NULL);
 		}
+		for (b = 0; b < width; b++)
+		{
+			poi[a][b] = 0;
+		}
 	}
-	if (poi == NULL)
-		return (NULL);
 	return (poi);
 }
