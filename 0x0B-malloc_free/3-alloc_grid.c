@@ -9,21 +9,25 @@
 
 int **alloc_grid(int width, int height)
 {
-	int **poi, a, b;
+	int **poi;
+	int *tmp;
+	int a, b;
 
 	if (width <= 0 || height <= 0)
 	{
-		return (0);
-	}
-	poi = malloc(height * sizeof(int));
-	if (poi == NULL)
 		return (NULL);
+	}
+	poi = malloc(height * sizeof(int *));
+	if (poi == NULL)
+	{
+		return (NULL);
+	}
 	for (a = 0; a < height; a++)
 	{
-		poi[a] = malloc(width * sizeof(int));
-		if (poi[a] == NULL)
+		tmp = malloc(width * sizeof(int));
+		if (tmp == NULL)
 		{
-			for (a -= 1; a >= 0; a--)
+			for (a = a - 1; a >= 0; a--)
 			{
 				free(poi[a]);
 			}
@@ -32,8 +36,9 @@ int **alloc_grid(int width, int height)
 		}
 		for (b = 0; b < width; b++)
 		{
-			poi[a][b] = 0;
+			tmp[b] = 0;
 		}
+		poi[a] = tmp;
 	}
 	return (poi);
 }
