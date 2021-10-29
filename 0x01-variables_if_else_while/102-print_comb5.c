@@ -17,14 +17,14 @@ int main(void)
 			{
 				for (d = '0'; d <= '9'; d++)
 				{
-					if (((c + d) > (a + b) && (c >= a)) || (c < a))
+					if (((c + d) > (a + b) && c >= a))
 					{
 					putchar(a);
 					putchar(b);
 					putchar(' ');
 					putchar(c);
 					putchar(d);
-					if (a + b + c + d == 227 && c == '9')
+					if (a + b + c + d == 227 && a == '9')
 					{
 						break;
 					}
