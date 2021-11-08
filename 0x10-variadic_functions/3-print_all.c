@@ -14,7 +14,7 @@ void print_all(const char * const format, ...)
 {
 	va_list pr;
 	char *separator = "";
-	unsigned int i = 0, p = 0;
+	unsigned int i = 0, p;
 
 	pr_a print[] = {
 		{"c", print_char},
