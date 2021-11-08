@@ -77,10 +77,19 @@ void print_float(va_list ap)
 
 /**
 *print_string - prints a string
-*@ap: list
+*@pr: list
 */
 
-void print_string(va_list ap)
+void print_string(va_list pr)
 {
-	printf("%s", va_arg(ap, char *));
+	char *str;
+
+	str = va_arg(pr, char *);
+	if (str != NULL)
+		printf("%s", str);
+	else
+	{
+		printf("(nil)");
+		return;
+	}
 }
