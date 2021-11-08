@@ -20,8 +20,8 @@ void print_all(const char * const format, ...)
 		{"s", print_string},
 		{NULL, NULL}
 	};
-	int i = 0;
-	int p = 0;
+	unsigned int i = 0;
+	unsigned int p = 0;
 	char *separator = "";
 
 	va_start(pr, format);
