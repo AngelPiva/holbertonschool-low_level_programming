@@ -13,6 +13,9 @@
 void print_all(const char * const format, ...)
 {
 	va_list pr;
+	char *separator = "";
+	unsigned int i = 0, p = 0;
+
 	pr_a print[] = {
 		{"c", print_char},
 		{"i", print_int},
@@ -20,9 +23,6 @@ void print_all(const char * const format, ...)
 		{"s", print_string},
 		{NULL, NULL}
 	};
-	unsigned int i = 0;
-	unsigned int p = 0;
-	char *separator = "";
 
 	va_start(pr, format);
 
@@ -47,32 +47,32 @@ void print_all(const char * const format, ...)
 
 /**
 *print_char - prints a char
-*@ap: list
+*@pr: list
 */
 
-void print_char(va_list ap)
+void print_char(va_list pr)
 {
-	printf("%c", va_arg(ap, int));
+	printf("%c", va_arg(pr, int));
 }
 
 /**
 *print_int - prints a integer
-*@ap: list
+*@pr: list
 */
 
-void print_int(va_list ap)
+void print_int(va_list pr)
 {
-	printf("%d", va_arg(ap, int));
+	printf("%d", va_arg(pr, int));
 }
 
 /**
 *print_float - prints a float
-*@ap: list
+*@pr: list
 */
 
-void print_float(va_list ap)
+void print_float(va_list pr)
 {
-	printf("%f", va_arg(ap, double));
+	printf("%f", va_arg(pr, double));
 }
 
 /**
