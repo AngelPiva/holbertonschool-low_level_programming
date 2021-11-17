@@ -2,8 +2,8 @@
 #include "main.h"
 
 /**
-*
-*
+*print_times_table - function that prints the n times table, starting with 0
+*@n: times
 */
 
 void print_times_table(int n)
@@ -47,8 +47,5 @@ void print_times_table(int n)
 			}
 			_putchar(10);
 		}
-	}
-	else
-	{
 	}
 }
