@@ -45,12 +45,20 @@ int cp_file(char *from, char *to)
 	op_to = open(to, O_RDWR | O_CREAT | O_TRUNC,
 	S_IWUSR | S_IRUSR | S_IRGRP | S_IWGRP | S_IROTH);
 
+	while (r)
+	{
 	r = read(op_fr, buf, 1024);
+	if (r == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", to);
+		exit(99);
+	}
 	r = write(op_to, buf, r);
 	if (r == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", to);
 		exit(99);
+	}
 	}
 	cf = close(op_fr);
 	if (cf == -1)
