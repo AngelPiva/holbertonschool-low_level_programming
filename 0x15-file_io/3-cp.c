@@ -42,9 +42,8 @@ int cp_file(char *from, char *to)
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", from);
 		exit(98);
 	}
-	if (from == NULL)
-		op_to = open(to, O_RDWR | O_CREAT | O_TRUNC, 0664);
 
+	op_to = open(to, O_CREAT | O_TRUNC | O_RDONLY, 0664);
 	while (r)
 	{
 	r = read(op_fr, buf, 1024);
