@@ -28,8 +28,7 @@ int main(int ac, char **av)
 
 int cp_file(char *from, char *to)
 {
-	int op_fr, op_to;
-	char r;
+	int op_fr, op_to, r;
 	char buf[1024];
 
 	if (from == NULL)
@@ -37,7 +36,7 @@ int cp_file(char *from, char *to)
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", from);
 		exit(98);
 	}
-	op_fr = open(from, O_RDWR, 0600);
+	op_fr = open(from, O_RDONLY);
 	if (op_fr == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", from);
@@ -47,12 +46,12 @@ int cp_file(char *from, char *to)
 
 	r = read(op_fr, buf, 1024);
 	r = write(op_to, buf, r);
-	if (write(op_to, buf, r) == -1)
+	if (r == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to %s", to);
 		exit(99);
 	}
 	close(op_fr);
 	close(op_to);
-	return (1);
+	return (0);
 }
