@@ -53,5 +53,5 @@ int cp_file(char *from, char *to)
 	}
 	close(op_fr);
 	close(op_to);
-	return (0);
+	return (1);
 }
