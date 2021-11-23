@@ -48,11 +48,6 @@ int cp_file(char *from, char *to)
 	while (r)
 	{
 	r = read(op_fr, buf, 1024);
-	if (r == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", to);
-		exit(99);
-	}
 	r = write(op_to, buf, r);
 	if (r == -1)
 	{
