@@ -43,7 +43,7 @@ int cp_file(char *from, char *to)
 		exit(98);
 	}
 
-	op_to = open(to, O_CREAT | O_TRUNC | O_RDWR, 0664);
+	op_to = open(to, O_CREAT | O_TRUNC | O_WRONLY, 0664);
 	while (r)
 	{
 	r = read(op_fr, buf, 1024);
