@@ -1,9 +1,8 @@
 #include <stdio.h>
 
 /**
- *
- *
- *
+ *main - main
+ *Return: 0
  */
 
 int main(void)
@@ -15,7 +14,7 @@ int main(void)
 
 	for (run = primes; run <= 612852475143;)
 	{
-		if (max % primes == 0 && )
+		if (max % primes == 0)
 		{
 			printf("%lu", primes);
 			break;
