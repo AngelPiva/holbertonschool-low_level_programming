@@ -10,16 +10,17 @@
 
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-	hash_node_t *new = NULL;
+	hash_node_t *new = NULL, *tmp = NULL;
 	unsigned long int index = 0;
 
 	if (!ht || strcmp(key, "") == 0)
 		return (0);
 	index = key_index((unsigned char *) key, ht->size);
-	if (ht->array[index] && ht->array[index]->key == key)
+	tmp = ht->array[index];
+	if (tmp && tmp->key == key)
 	{
-		free(ht->array[index]->value);
-		ht->array[index]->value = strdup(value);
+		free(tmp->value);
+		tmp->value = strdup(value);
 		return (1);
 	}
 	new = malloc(sizeof(hash_node_t));
